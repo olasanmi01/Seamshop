@@ -90,7 +90,7 @@ section {font-family:Arial, Helvetica, sans-serif;}
 /*HOME PAGE CONTENTS*/
 .section1 {
     display: flex;
-    background-image: url("/img/index.jpg");
+    background-image: url("../img/index.jpg");
     background-size: cover;
     background-position: top 9% right 0;
     align-items: flex-start;
@@ -99,6 +99,7 @@ section {font-family:Arial, Helvetica, sans-serif;}
 }
 
 .section1-main-text {
+    position: absolute;
     margin-left: 2%;
     margin-top: 20%;
 }
