@@ -1,0 +1,1513 @@
+/*
+This is the CSS file for this project work.
+The structure of the design will be as follow;
+General Contents, Home page, Shop page, Contact Page, About Page, Cart Page and Media Queries for responsiveness.
+*/
+
+
+/*General Contents: These include body, html, main, header contents and footer contents*/
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+
+html {height: 100%;}
+
+main {background-color: rgb(254, 255, 241);}
+
+header {
+    display: flex;
+    top: 0;
+    left: 0;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(254, 255, 241);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+}
+
+/*Header Contents*/
+.menu ul {
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu li {
+    list-style-type: none;
+    position: relative;
+    padding: 0px 20px;
+}
+
+.menu li a {
+    color: rgb(65, 41, 31);
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 17px;
+    transition: 0.3s ease;
+}
+
+.menu li a:hover, .menu li a.active-page {
+    color: rgb(239, 131, 131);
+}
+
+.menu li a.active-page::after, .menu li a:hover::after {
+/* This design is for the short underline under the header menu contents*/
+    content: "";
+    background-color: rgb(239, 131, 131);
+    height: 2px;
+    width: 30%;
+    position: absolute;
+    bottom: -2px;
+    left: 20px;
+}
+
+.logo-header, .logo-footer {
+/*This design is for the Seamshop logo at the header and the footer*/
+    color: rgb(65, 41, 31);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    text-decoration: none;
+    margin: 0px;
+}
+
+.logo-header:hover, .logo-footer:hover{
+    color:  rgb(239, 131, 131);
+    transition: 0.3s;
+}
+
+.logo-header {margin-left: 20px;}
+
+section {font-family:Arial, Helvetica, sans-serif;}
+
+
+/*HOME PAGE CONTENTS*/
+.section1 {
+    display: flex;
+    background-image: url("/img/index.jpg");
+    background-size: cover;
+    background-position: top 9% right 0;
+    align-items: flex-start;
+    height: 110vh;
+    padding: 0px;
+}
+
+.section1-main-text {
+    margin-left: 2%;
+    margin-top: 20%;
+}
+
+.section1-main-text h4 {
+    color: rgb(65, 41, 31);
+    font-size: 18px;
+    font-weight: 530; 
+    text-transform: capitalize; 
+    padding: 0px; 
+    margin: 0px;
+    margin-left: 4px;
+}
+
+.section1-main-text h1 {
+    color: rgb(254, 255, 241);
+    font-size: 65px;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 2px #2929299f;
+    line-height: 1.1;
+    margin: 6px 0 10px;
+    margin: 0px;
+    margin-top: -10px;
+    padding: 0px;
+}
+
+.section1-main-text p {
+    color: rgb(65, 41, 31);
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin: 0px;
+    margin-left: 4px;
+    padding: 0px;
+}
+
+.button1 {
+/* This design is for the 'Shop Now' button*/
+    display: inline-block;
+    color: rgb(254, 255, 241);
+    background-color: rgb(65, 41, 31);
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+    border: 2px solid rgb(254, 255, 241);
+    border-radius: 20px;
+    padding: 12px 25px;
+    transition: all .42s ease;
+    text-decoration: none;
+    margin-left: 4px;
+    margin-top: 8px;
+}
+
+.button1:hover {
+    color:  rgb(65, 41, 31);
+    background-color: rgb(239, 131, 131);
+    border: 2px solid rgb(65, 41, 31);
+}
+
+.button1 i {vertical-align: middle;}
+
+.featured {
+/*Featured Products*/
+   text-align: center;
+   font-family: sans-serif;
+   height: 80px;
+   margin-top: 20px;
+   padding: 0px;
+}
+
+.featured-text h2 {
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0px;
+}
+
+.featured-text p {
+    margin: 0px;
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.pink {
+/*This is a span text which changes the colour of the 'Product' and the 'New' texts to pink in the homepage */
+    color:rgb(239, 131, 131);
+}
+
+.products {
+/*This designs the structure of the 8 featured products shown in the homepage*/
+    display: grid;
+    background-color:  rgb(254, 255, 241);
+    grid-template-columns: repeat(auto-fit,minmax(260px, auto));
+    gap: 2rem;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.row {
+/*Each of the featured products is class named as 'row'*/
+    position: relative;
+    transition: all .40s;
+}
+
+.row img {
+    width: 100%;
+    height: auto;
+    transition: all .40s;
+    cursor: pointer;
+}
+
+.row img:hover {transform: scale(0.9);}
+
+.product-text h5 {
+    color: rgb(254, 255, 241);
+    background-color: rgb(65, 41, 31);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 2px;
+}
+
+.heart-icon {
+    color:  rgb(65, 41, 31);
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+}
+
+.heart-icon:hover {color: rgb(239, 131, 131);}
+
+.rating i {
+    color: rgb(65, 41, 31);
+    font-size: 18px;
+}
+
+.price h4 {
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    margin: 0px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.price p {
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    margin-top: 5px;
+}
+
+.price a {text-decoration: none;}
+
+.button2 {
+/*This design is for the 'View All Products' button*/
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    justify-content: center;
+    padding: 0px;
+    margin-top: 15px;
+    height: 30px;
+}
+
+.button2 a {text-decoration: none;}
+
+.button2 .btn-1 {
+    color: rgb(65, 41, 31);
+    background-color:  rgb(254, 255, 241);
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid rgb(65, 41, 31);
+    border-radius: 50px;
+    transition: 0.5s;
+    padding: 5px;
+}
+
+.button2 .btn-1:hover {
+    color: rgb(254, 255, 241);
+    background-color: rgb(65, 41, 31);
+}
+
+.new-arrivals {
+/*New Arrivals*/
+    font-family: sans-serif;
+    height: 80px;
+    text-align: center;
+    margin-top: 40px;
+    padding: 0px;
+ }
+
+ .arrivals h2 {
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0px;
+ }
+
+ .arrivals p {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0px;
+    margin-top: 5px;
+}
+
+.arrival-items {
+    display: grid;
+    background-color:  rgb(254, 255, 241);
+    grid-template-columns: repeat(auto-fit,minmax(260px, auto));
+    gap: 2rem;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 50px;  
+}
+
+.item {
+/*item is the name given to each of the products in the 'New Arrivals' section*/    
+    background-color:  rgb(254, 255, 241);
+    position: relative;
+    transition: all .40s;
+}
+
+.item img {
+    background-color:  rgb(254, 255, 241);
+    width: 100%;
+    height: auto;
+    transition: all .40s;
+    cursor: pointer;
+}
+
+.item img:hover {transform: scale(0.9);}
+
+.item-text h5 {
+    color: #fff;
+    background-color: rgb(239, 131, 131);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    padding: 3px 10px;
+}
+
+.heart-icon-arrival {
+    color:  rgb(239, 131, 131);
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+}
+
+.heart-icon-arrival:hover {color: rgb(65, 41, 31);}
+
+#newsletter {
+/*This design is for the newsletter below the 'View All Products' button*/
+    display: flex;
+    flex-wrap: wrap;
+    background-color:  rgb(239, 131, 131);
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 40px 50px;
+    margin-top: 25px;
+}
+
+.newstext span {color: rgb(254, 255, 241);}
+
+#newsletter h4 {
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0px;
+}
+
+#newsletter p {
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0px;
+    margin-top: 10px;
+}
+
+#newsletter input {
+    font-size: 14px;
+    width: 100%;
+    height: 3.125rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    outline: none;
+    padding: 0 1.25em;
+}
+
+#newsletter button {
+/*This design is for the 'Sign Up' button in the newsletter section*/
+    color: white;
+    background-color: rgb(65, 41, 31);
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    cursor: pointer;
+    outline: none;
+    padding: 15px 30px;
+    transition: 0.5s;
+    white-space: nowrap;
+}
+
+#newsletter .form {
+    display: flex;
+    width: 40%;
+}
+
+footer {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:  rgb(254, 255, 241);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 50px;
+}
+
+
+/*Footer Contents*/
+footer .column, .column2, .column3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+footer .column h4 {
+    font-size: 14px;
+    margin: 0px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer .column2 h4, .column3 h4, .install h4 {
+    margin: 0px;
+    padding-bottom: 20px;
+}
+
+footer p {
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+footer a {
+    color: black;
+    font-size: 14px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+footer .follow-us {margin-top: 20px;}
+
+footer .follow-us i {
+    color: rgb(239, 131, 131);
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+footer .follow-us i:hover {
+    color: rgb(65, 41, 31);
+    transition: 0.3s;
+}
+
+.install img  { 
+    height: 50px;
+    border: 1px solid rgb(239, 131, 131);
+    border-radius: 6px;
+    margin: 5px 0 10px 0;
+ }
+ 
+ .install .store img {cursor: pointer;}
+
+footer .copyright {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+/*SHOP PAGE CONTENTS*/
+/* The product items displayed in this Shop page has been created using javascript with the
+aim of having an interactive 3 X 3 image gallery created from a JSON object*/
+
+.shop-top {
+    display: flex;
+    flex-direction: column;
+    background-color:  rgb(239, 131, 131);
+    height: 50px;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 50px;
+}
+
+.shop-top h1 {
+    color: rgb(254, 255, 241);
+    font-size: 30px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.shop-top p {
+    color: rgb(65, 41, 31);
+    margin: 0px;
+    margin-top: 10px;
+    padding: 0px;
+}
+
+.shopproducts {
+    display: flex;
+    flex-wrap: wrap;
+    width: 900px;
+    margin: auto;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+
+.shop-item {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    background-color: rgb(254, 255, 241);
+    font-family: Arial, Helvetica, sans-serif;
+    width: 33%;
+    margin-bottom: 15px;
+    padding: 5px;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: all .40s;
+}
+
+.shop-item:hover {
+    background-color: rgb(209, 209, 209);
+    transform: scale(0.9);
+}
+
+.shop-item caption {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: auto;
+}
+
+.shop-item p {
+    font-weight: bold;
+    margin: 0px;
+}
+
+.shop-btn {
+/*This designs the 4 buttons on the shop page under the shop items*/
+    display: flex;    
+    text-align: center;
+    padding: 0px;
+    justify-content: center;
+}
+
+.shop-btn a {margin-right: 15px;}
+
+.current-page, .next {
+    display: inline-block;
+    color: rgb(254, 255, 241);
+    background-color: rgb(65, 41, 31);
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-decoration: none;
+    border: 2px solid rgb(254, 255, 241);
+    border-radius: 15px;
+    padding: 6px 13px;
+    transition: all .42s ease;
+}
+
+.current-page:hover, .next:hover {
+    color:  rgb(65, 41, 31);
+    background-color: rgb(254, 255, 241);
+    border: 2px solid rgb(65, 41, 31);
+}
+
+
+/* CONTACT PAGE CONTENTS*/
+.contact-container {background-color: rgb(254, 255, 241);}
+
+.contact-top {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(239, 131, 131);
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-top h1 {
+    color: rgb(254, 255, 241);
+    font-size: 30px;
+    margin: 0px;
+    padding-top: 30px;
+}
+
+.contact-top p {
+    color: rgb(65, 41, 31);
+    margin: 0px;
+    padding-top: 16px;
+}
+
+.content {
+    display: flex;
+    min-height: 110vh;
+}
+
+.content, .contact-info {background-color: rgb(239, 131, 131);}
+
+.content-form {
+    margin: 0px;
+    padding-top: 3.5rem;
+    padding-left: 9vh;
+}
+
+.content-form section, .contact-top {
+    margin: 0px;
+    padding: 0px;
+}
+
+.content-section {margin: 30px;}
+
+.content-section h2 {
+    color: rgb(65, 41, 31);
+    margin: 0px;
+}
+
+.content-section p {
+    color: rgb(254, 255, 241);
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+.content-section i {
+    color: rgb(254, 255, 241);
+    border-radius: 50%;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.media {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+
+.media li {list-style-type: none;}
+
+.media i {
+    color: rgb(65, 41, 31);
+    cursor: pointer;
+}
+
+.media i:hover {
+    color: rgb(254, 255, 241);
+    transition: 0.3s;
+}
+
+.c-info {
+    display: flex;
+    color: rgb(65, 41, 31);
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    min-height: 110vh;
+    margin-left: 54%;
+    justify-content: center;
+    align-items: center;
+}
+
+.c-info .contact-form input {
+    font-size: 18px;
+    background-color: transparent;
+    border: 0px;
+    border: transparent;
+    border-bottom: 2px solid rgb(254, 255, 241);
+    width: 25rem;
+    margin: 10px;
+    padding: 20px;    
+}
+
+.c-info .contact-form input ~ span {
+    position: absolute;
+    left: 20px;
+    margin-top: 10px;
+    transition: 0.9s ease-in-out;
+}
+
+
+.c-info .contact-form textarea {
+    font-size: 17px;
+    background-color: transparent;
+    width: 25rem;
+    border: 0;
+    border-bottom: 2px solid rgb(254, 255, 241);
+    margin: 10px;
+    padding: 20px;
+}
+
+.c-info .contact-form textarea ~ span {
+    position: absolute;
+    left: 20px;
+    margin-top: 10px;
+    transition: 0.9s ease-in-out;
+}
+
+.c-info .contact-form input[type=submit] {
+    color: rgb(254, 255, 241);
+    background-color: rgb(65, 41, 31);
+    font-size: 18px;
+    border: 2px solid rgb(254, 255, 241);
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
+    padding-top: 8px;
+    cursor: pointer;
+}
+
+.c-info .contact-form input[type=submit]:hover {
+    color: rgb(65, 41, 31);
+    background-color: transparent;
+    border: 2px solid rgb(65, 41, 31);
+    transition: 0.3s;
+}
+
+
+/* ABOUT US PAGE*/
+.about {
+    background-color:  rgb(254, 255, 241);
+    padding: 0px;
+}
+
+.about-top {
+    background-color:rgb(239, 131, 131);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 0px;
+    padding-bottom: 10px;
+}
+
+.about-top h1 {
+    color: rgb(254, 255, 241);
+    font-size: 30px;
+    margin: 0px;
+    padding-top: 30px;
+}
+
+.about-top p {
+    color: rgb(65, 41, 31);
+    margin-bottom: 20px;
+    margin: 0px;
+    padding-top: 16px;
+}
+
+.about-us {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    padding: 0px;
+}
+
+.about-us img {
+    flex: 0 50%;
+    max-width: 70%;
+    height: 400px;
+    margin-top: 20px;
+}
+
+.about-content {
+    padding-left: 35px;
+    margin-right: 50px;
+}
+
+.about-content h2 {
+    color: rgb(65, 41, 31);
+    font-size: 24px;
+    margin: 15px 0px;
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 15px 0px;
+}
+
+.read-more-btn {
+    display: inline-block;
+    color: rgb(254, 255, 241);
+    font-size: 18px;
+    background-color: rgb(65, 41, 31); 
+    border: 2px solid rgb(254, 255, 241);
+    border-radius: 20px;
+    width: 140px;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.read-more-btn:hover {
+    color: rgb(65, 41, 31);
+    background-color: rgb(254, 255, 241);
+    border: 2px solid rgb(65, 41, 31); 
+    transition: 0.3s;
+}
+
+
+/* CART PAGE */
+/* On this page, I have designed two interactive image carousel generated from a JSON object */
+.cart-top {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:rgb(239, 131, 131);
+    text-align: center;
+    padding: 0px;
+    padding-bottom: 10px;
+}
+
+.cart-top h1 {
+    color: rgb(254, 255, 241);
+    font-size: 30px;
+    margin: 0px;
+    padding-top: 30px;
+}
+
+.cart-top p {
+    color: rgb(65, 41, 31);
+    margin: 0px;
+    margin-bottom: 20px;
+    padding-top: 16px;
+}
+
+.carousel-title {
+    padding: 0px;
+    text-align: center;
+}
+
+.carousel-title h2 {
+    color: rgb(65, 41, 31);
+    margin: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cart-adverts {
+    display: flex;
+    justify-content: space-between;
+}
+
+.adverts {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    overflow: hidden;
+    width: 450px;
+    height: 350px;
+    box-sizing: border-box;
+    margin: auto;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1); 
+    transition: all .40s;
+}
+
+.adverts:hover {transform: scale(0.9);}
+
+.adverts nav {
+    display: flex;
+    z-index: 2;
+    width: 450px;
+    height: 300px;
+    line-height: 300px;
+    justify-content: space-between;
+}
+
+.adverts nav a {
+    color: rgba(239, 131, 131);
+    background-color: rgba(0, 0, 0, 0);
+    font-weight: bold;
+    font-size: 30pt;
+    padding: 0px 25px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    opacity: 0;
+}
+
+.adverts nav a:hover {
+    background-color: rgba(130, 130, 130, 0.112);
+    opacity: 1;
+    transition: all 0.25s ease;
+}
+
+.advert-images, .advert-images2 {
+    position: absolute;
+    width: 4050px;
+    height: 350px;
+    z-index: 1;
+    left: 0;
+    transition: left 0.5s ease-in-out;
+}
+
+.advert-images img, .advert-images2 img {
+    width: 450px;
+    height: 350px;
+}
+
+.caption-adverts, .caption-adverts2 {
+    color:  rgb(254, 255, 241);
+    background-color: rgba(239, 131, 131, 0.66);
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    margin: 0px;
+    text-align: center;
+    line-height: 50px;
+    z-index: 3;
+    bottom: 0;
+    cursor: pointer;
+}
+
+
+
+
+ /* To make the website responsive, I have used the media queries for two different sizes on different
+ mobile devices*/
+
+ @media only screen and (max-width: 768px) {
+/* For mobile phones: IPAD */
+ /* Home Page*/   
+.section1 {
+    width: 100%;
+    height: 700px;
+    background-position: top 9% right 50%;
+}
+
+.section1-main-text {
+    margin-left: 20px;
+    margin-top: 45%;
+}
+
+.button1 {border-radius: 0px;}
+
+.button2 .btn-1 {border-radius: 0px;}
+
+#newsletter {
+    height: 100px;
+    margin: 0px;
+    margin-top: 0px;
+    padding: 20px;
+    justify-content:space-between;
+}
+
+footer {padding: 20px;}
+
+footer .install {padding-top: 20px;}
+
+
+/*Shop Page Media Query design for IPAD device*/
+.shopproducts {
+    width: 728px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.shop-item p {text-align: center;}
+
+.shop-item caption {
+    margin: auto;
+    text-align: center;
+}
+
+.shop-btn {margin-bottom: 5px;}
+
+.current-page, .next {
+    font-size: 12px;
+    border: none;
+    border-radius: 0px;
+    padding: 2px 6px;
+}
+
+
+/*Contact Page Media Query design for IPAD device*/
+.contact-container {
+    height: 682px;
+    margin-bottom: 17px;
+}
+
+.contact-top {
+    padding-bottom: 15px;
+    margin-bottom: 4px;
+}
+.content {
+    height: 577px;
+    min-height: 0vh;
+}
+.content-section h2 {font-size: 18px;}
+
+.content-form {
+    height: 500px;
+    padding-top: 4.5rem;
+    padding-left: 20px;
+}
+
+.c-info {
+    min-height: 40vh;
+    margin-left: 49%;
+    top: 210px;
+}
+
+.c-info .contact-form input, .c-info .contact-form textarea {
+    width: 20rem;
+}
+
+.c-info .contact-form input[type=submit] {
+    border-radius: 0px;
+}
+
+
+/*About Page Media Query design for IPAD device*/
+.about-us {
+    flex-direction: column;
+    margin: 20px 20px;
+}
+    
+.about-us img {
+    flex: 0 100%;
+    max-width: 100%;
+}
+    
+.about-content {
+    flex: 0 100%;
+    max-width: 100%;
+    padding: 15px;
+    margin: 0px;
+}
+
+.read-more-btn {
+    border-radius: 0px;
+    border: none;
+    padding: 10px 7px;
+    width: 117px;
+}
+
+
+/*Cart Page Media Query design for IPAD device*/
+.carousel-title h2 {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+        
+.adverts {margin: 20px;}
+}
+
+
+
+
+@media only screen and (max-width: 390px) {
+/* For mobile phones: Iphone 12 Pro */
+/* Home Page*/
+header {
+    width: 100%;
+    height: 25px;
+}
+.logo-header {
+    font-size: 10px;
+    margin-left: 20px;  
+}
+
+.menu {padding-right: 20px;}
+
+.menu li {
+    padding: 0px;
+    padding-left: 20px;
+}
+
+.menu li a {font-size: 10px;}
+
+.menu li a.active-page::after, .menu li a:hover::after {
+    bottom: -1px;
+}
+
+.section1 {
+    height: 400px;
+    background-position: top 9% right 50%;
+}
+
+.section1-main-text {
+    margin-left: 10px;
+    margin-top: 55%;
+}
+
+.section1-main-text h4 {
+    font-size: 11px;
+    margin-left: 2px;
+}
+
+.section1-main-text h1 {
+    font-size: 30px;
+    margin-top: 1px;
+}
+
+.section1-main-text p {
+    font-size: 11px;
+    margin-left: 2px;
+}
+
+.button1 {
+    font-size: 10px;
+    border-radius: 0px;
+    margin-left: 2px;
+    padding: 6px 10px;
+}
+
+.featured {
+    height: auto;
+    margin-top: 10px;   
+}
+
+.featured-text h2 {font-size: 20px;}
+
+.featured-text p {
+    font-size: 9px;
+    font-weight: 600;
+    margin-top: 0px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    height: 850px;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.row {
+    height: 150px;
+    width: 120px;
+    margin: 0px;
+    margin-bottom: 8px;
+}
+
+.row img {
+    height: 140px;
+    width: 110px;
+}
+
+.product-text h5 {
+    font-size: 6px;
+    top: 13px;
+    left: 3px;
+    margin: 0px;
+    padding: 1px 5px;  
+}
+
+.heart-icon {visibility: hidden;}
+
+.rating i {font-size: 10px;}
+
+.price h4, .price p {
+    font-size: 8px;
+    font-weight: 500;
+    margin-top: 3px;
+}
+
+.button2 {
+    height: auto;
+    margin-top: 8px;
+}
+
+.button2 .btn-1 {
+    font-size: 8px;
+    border-radius: 0px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.new-arrivals {
+    height: auto;
+    margin-top: 15px;
+}
+
+.new-arrivals h2 {font-size: 20px;}
+
+.new-arrivals p {
+    font-size: 9px;
+    margin-top: 2px;
+}
+
+.arrival-items {
+    display: flex;
+    flex-wrap: wrap;
+    height: 450px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.arrival-items .item {
+    height: 190px;
+    width: 120px;    
+    margin: 0px; 
+    margin-top: 5px;
+}
+
+.item-text h5 {
+    font-size: 6px;
+    left: 3px;
+    top: 0px;
+    padding: 1px 5px;
+}
+
+.heart-icon-arrival {
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+#newsletter {
+    height: 50px;
+    margin-top: 0px;
+}
+
+#newsletter h4 {font-size: 10px;}
+
+#newsletter p {
+    font-size: 8px;
+    margin-top: 2px;
+}
+
+#newsletter .form {
+    height: 20px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+#newsletter .form input {
+    font-size: 8px;
+    height: 18.9px;
+    border-radius: 0px;
+}
+
+#newsletter button {
+    font-size: 8px; 
+    border-radius: 0px;
+    padding: 5px 10px;
+}
+
+footer {padding: 10px 20px;}
+
+footer .logo-footer {font-size: 10px;}
+
+footer .column h4 {
+    font-size: 10px;
+    margin-top: 10px;
+    padding-bottom: 2px;
+}
+
+footer p {
+    font-size: 8px;
+    margin: 0 0 4px 0;
+}
+
+footer .follow-us {margin-top: 0px;}
+
+footer a {
+    font-size: 8px;
+    margin-bottom: 5px;
+}
+
+footer .column2 h4, .column3 h4, .install h4 {
+    font-size: 10px;
+    padding-bottom: 5px;
+}
+
+footer .install {padding-top: 8px;}
+
+.install .store img {
+    height: 25px;
+    width: 70px;
+}
+
+.install img {
+    height: 30px;
+    border-radius: 0px;
+    margin: 0px;
+}
+
+
+/* Shop Page Media Query design for Iphone 12 Pro*/
+.shop-top {
+    height: 65px;
+    padding: 0px 0px;
+}
+
+.shop-top h1 {font-size: 20px;}
+
+.shop-top p {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.shopproducts {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.shop-item {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.shop-item caption, .shop-item p {
+    font-size: 9px;
+    text-align: start;
+}
+
+.shop-item caption {margin: 0px;}
+
+.shop-btn {padding-bottom: 5px;}
+
+.shop-btn a {
+    height: 12px;
+    width: 10px;
+}
+
+.current-page, .next {
+    font-size: 10px;
+    border: none;
+    border-radius: 0px;
+    /*padding: 4px 7px;*/
+    padding: 1px 4px;
+}
+
+
+/*Contact Page Media Query design for Iphone 12 Pro*/
+.contact-container {
+    height: 421px;
+}
+
+.contact-top {
+    height: 65px;
+    margin-bottom: 4px;
+    padding-bottom: 5px;
+}
+
+.contact-top h1 {
+    font-size: 20px; 
+    padding-top: 20px;
+}
+
+.contact-top p {
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+.content {height: 360px;}
+
+.content-form {
+    height: 320px;
+    padding-top: 20px;
+}
+
+.content-form section {padding-top: 5px;}
+
+.content-section i {font-size: 12px;}
+
+.content-section h2 {font-size: 12px;}
+
+.content-section p {
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+.media {margin-top: 0px;}
+ 
+.content-section .media i {font-size: 15px;}
+
+.contact-info .c-info {
+    min-height: 300px;
+    top: 137px;
+}
+
+.contact-form {padding-bottom: 15px;}
+
+.c-info .contact-form input {
+    font-size: 10px;
+    height: 30px;
+    width: 160px;
+    padding: 5px; 
+}
+
+.c-info .contact-form textarea {
+    width: 150px;
+    margin: 11px;
+    padding: 10px;
+}
+
+.c-info .contact-form textarea ~ span {
+    font-size: 10px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding-left: 0px;
+}
+
+.c-info .contact-form input ~ span {
+    font-size: 10px;
+    font-weight: bold;
+    padding-left: 0px;
+}
+
+.c-info .contact-form input[type=submit] {
+    font-size: 10px;
+    border-radius: 0px;
+    height: 27px;
+    width: 54px;
+    margin-left: 127px;
+    padding-top: 6px; 
+}
+
+
+/* About Page Media Query design for Iphone 12 Pro*/
+.about-top {
+    height: 65px;
+    padding-bottom: 5px;
+}
+
+.about-top h1 {
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.about-top p {
+    font-size: 12px;
+    margin-bottom: 0px;
+    padding-top: 5px;
+}
+
+.about-us img {margin-top: 0px;}
+
+.about-content {
+    padding: 0px;
+    padding-top: 10px;
+}
+
+.about-content h2 {
+    font-size: 15px;
+    margin: 0px;
+}
+
+.about-content p {
+    font-size: 11px;
+    margin: 5px 0px;   
+}
+
+.read-more-btn {
+    font-size: 11px;
+    width: 70px;
+    border: none;
+    border-radius: 0px;
+    padding: 3px 0px;
+}
+
+
+/* Cart Page Media Query design for Iphone 12 Pro*/
+.cart-top {
+    height: 65px;
+    padding-bottom: 5px;
+}
+
+.cart-top h1 {
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.cart-top p {
+    font-size: 12px;
+    margin-bottom: 0px;
+    padding-top: 5px;
+}
+
+.carousel-title h2 {
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+}
+
+.cart-adverts {display: block;}
+
+.adverts {
+    width: 350px;
+    margin: 0px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+}
